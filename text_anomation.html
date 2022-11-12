@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #0b0b46;
+        }
+        h1{
+            position: relative;
+            font-size: 14vh;
+            color: #0b0b46 ;
+            -webkit-text-stroke: 1px green;
+            text-transform: uppercase;
+            font-family: 'Lato', sans-serif;
+        }
+        h1::before{
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            color: #01fe8c;
+            -webkit-text-stroke: 0 blue;
+            border-right: 2px solid #01fe8c;
+            overflow: hidden;
+            animation: animate 5s linear infinite;
+        }
+        
+        @keyframes animate{
+            0%,10%,100%{
+                width: 0;
+            }
+            70%,90%{
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <h1 data-text="badshacoding....">badshacoding....</h1>
+</body>
+</html>
