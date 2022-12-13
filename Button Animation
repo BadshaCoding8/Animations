@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu&display=swap');
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: rgb(46, 51, 61);
+        }
+
+        .btn {
+            position: relative;
+            width: 200px;
+            height: 60px;
+            background: rgb(0, 142, 177);
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(122, 246, 255);
+            text-decoration: none;
+            letter-spacing: 2px;
+            padding-left: 50px;
+            transition: 0.5s;
+            overflow: hidden;
+        }
+
+        .btn:hover {
+            padding-left: 0px;
+            padding-right: 50px;
+            color: rgb(255, 255, 255);
+        }
+
+        .btn span {
+            position: absolute;
+            left: 5px;
+            width: 50px;
+            height: 50px;
+            background: lightgreen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: blue;
+            font-size: 1.5em;
+            border-radius: 50px;
+            transition: 0.5s ease-in-out;
+        }
+
+        .btn:hover span {
+            left: calc(100% - 55px);
+        }
+
+        .btn::after{
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 100%;
+            z-index: 1;
+            background: lightgoldenrodyellow;
+            transform: translate(-170px) skewX(30deg);
+            transition: 0.25s ease-in-out;
+        }
+
+        .btn:hover::after{
+            transform: translate(170px) skewX(30deg)
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#" class="btn">Swipe Next 
+        <span>
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+        </span>
+    </a>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
